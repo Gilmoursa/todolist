@@ -1,8 +1,13 @@
 /*  some basic CSS to style the do list */
 /* container styling*/
-
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
 .container {
-    width: 80%;
+    width: 50%;
     margin: 5% auto;
     background: rgb(255, 255, 177);
     padding: 5%;
@@ -14,6 +19,7 @@
 /* Form basics */
 h1 {
     text-align: center;
+    padding-bottom: 10px;
   }
   
   form {
@@ -55,6 +61,9 @@ h1 {
   li {
     font-size: 16px;
     margin-bottom: 10px;
+    font-weight: bold;
+    background-color: #4fd267;
+    padding: 5px;
   }
   
   li span {
@@ -62,7 +71,8 @@ h1 {
   }
   
   li span:hover {
-    text-decoration: line-through;
+    color: red;
+    font-weight: bold;
   }
 
   /* todo: style the tasks, edit button, and 'X' */
