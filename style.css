@@ -1,5 +1,16 @@
 /*  some basic CSS to style the do list */
+/* container styling*/
 
+.container {
+    width: 80%;
+    margin: 5% auto;
+    background: rgb(255, 255, 177);
+    padding: 5%;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 15px black;
+}
 /* Form basics */
 h1 {
     text-align: center;
