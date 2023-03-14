@@ -4,12 +4,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
 }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D94C3F;
+  }
+
 .container {
     width: 50%;
     margin: 5% auto;
-    background: rgb(255, 255, 177);
+    background: #C8C8C8;
     padding: 5%;
     box-sizing: border-box;
     border-radius: 20px;
@@ -18,26 +23,51 @@
 }
 /* Form basics */
 h1 {
-    text-align: center;
-    padding-bottom: 10px;
-  }
+  color: #355070;
+  text-align: center;
+}
   
-  form {
+form {
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    margin-bottom: 10px;
   }
   
   input[type="text"] {
-    width: 300px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
+    flex-grow: 1;
+    padding: 8px;
+    border: none;
     border-radius: 5px;
-    margin-right: 10px;
+    font-size: 16px;
+    background-color: #f7e8e0;
   }
 
-  .category {
+  select {
+    margin: 0 10px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f7e8e0;
+    color: #7b3e2b;
+  }
+
+  button[type="button"] {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #d94c3f;
+    color: #fff;
+    cursor: pointer;
+  }
+.description {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px;
+    margin-bottom: 20px;
+}
+.category {
     font-size: 10px;
     font-weight: normal;
     padding: 2px;
@@ -48,8 +78,8 @@ h1 {
 .PERSONAL {
     background-color: #8c8cfb;
 }
+ 
 
-  /* button styling */
   button {
     padding: 10px 20px;
     background-color: #4CAF50;
@@ -62,20 +92,20 @@ h1 {
   button:hover {
     background-color: #3e8e41;
   }
-
+  
   /* list styling */
   ul {
-    list-style-type: none;
+    list-style: none;
+    margin: 0;
     padding: 0;
-    margin: 20px;
   }
   
   li {
-    font-size: 16px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    background-color: #4fd267;
-    padding: 5px;
+    margin-bottom: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #f7e8e0;
+    position: relative;
   }
   
   li span {
@@ -86,5 +116,36 @@ h1 {
     color: red;
     font-weight: bold;
   }
-
+  
+  li:hover {
+    background-color: #f1d1bf;
+  }
+  
+  .delete {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #7b3e2b;
+    cursor: pointer;
+  }
+  
+  .edit {
+    position: absolute;
+    top: 50%;
+    right: 80px;
+    transform: translateY(-50%);
+    color: #7b3e2b;
+    cursor: pointer;
+  }
+  
+  .category {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translateY(-50%);
+    color: #7b3e2b;
+    font-style: italic;
+    font-size: 14px;
+  }
   /* todo: style the tasks, edit button, and 'X' */
