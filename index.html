@@ -13,6 +13,12 @@
     <p>Fill in the field below to add a new task. Click on a task below the form field to delete it.</p>
     <form>
       <input type="text" id="taskInput" placeholder="Add a task that needs doing">
+      <select id="categorySelect">
+        <option value="">Select category</option>
+        <option value="work">Work</option>
+        <option value="personal">Personal</option>
+        <option value="other">Other</option>
+      </select>
       <button type="button" id="addButton">Add</button>
     </form>
     <ul id="taskList">
