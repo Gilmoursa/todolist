@@ -1,16 +1,23 @@
 /*  some basic CSS to style the do list */
-/* container styling*/
+/* general styling*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     line-height: 1.5;
 }
+
 body {
     font-family: Arial, sans-serif;
     background-color: #D94C3F;
-  }
+}
 
+h1 {
+    color: #355070;
+    text-align: center;
+}
+
+/* container styling*/
 .container {
     width: 50%;
     margin: 5% auto;
@@ -21,28 +28,70 @@ body {
     border: 1px solid black;
     box-shadow: 5px 5px 15px black;
 }
-/* Form basics */
-h1 {
-  color: #355070;
-  text-align: center;
+
+#taskContainer {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #4CAF50;
 }
-  
+
+#categoryContainer {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #6394cf;
+}
+
+.categoryInstructions {
+    padding: 10px;
+    color: #355070;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.taskInstructions {
+    padding: 10px;
+    color: #183619;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Form basics */
+#categoryCancelButton {
+    background-color: #565656;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#categoryCancelButton:hover {
+    background-color: #242424;
+    color: #C8C8C8;
+}
+
 form {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-  }
-  
-  input[type="text"] {
+}
+
+input[type="text"] {
     flex-grow: 1;
     padding: 8px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     background-color: #f7e8e0;
-  }
+}
 
-  select {
+select {
     margin: 0 10px;
     padding: 8px;
     border: none;
@@ -50,9 +99,9 @@ form {
     font-size: 16px;
     background-color: #f7e8e0;
     color: #7b3e2b;
-  }
+}
 
-  button[type="button"] {
+button[type="button"] {
     padding: 8px 16px;
     border: none;
     border-radius: 5px;
@@ -60,86 +109,90 @@ form {
     background-color: #d94c3f;
     color: #fff;
     cursor: pointer;
-  }
+}
+
 .description {
     font-size: 14px;
     font-weight: bold;
     padding: 2px;
     margin-bottom: 20px;
 }
+
 .category {
     font-size: 10px;
     font-weight: normal;
     padding: 2px;
 }
+
 .WORK {
     background-color: #ff8c8c;
 }
+
 .PERSONAL {
     background-color: #8c8cfb;
 }
- 
 
-  button {
+/* button styling */
+button {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #d94c3f;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #3e8e41;
-  }
-  
-  /* list styling */
-  ul {
+}
+
+button:hover {
+    background-color: #711e1e;
+}
+
+/* list styling */
+ul {
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  
-  li {
+}
+
+li {
     margin-bottom: 5px;
     padding: 8px;
     border-radius: 5px;
     background-color: #f7e8e0;
     position: relative;
-  }
-  
-  li span {
+}
+
+li span {
     cursor: pointer;
-  }
-  
-  li span:hover {
+}
+
+li span:hover {
     color: red;
     font-weight: bold;
-  }
-  
-  li:hover {
+}
+
+li:hover {
     background-color: #f1d1bf;
-  }
-  
-  .delete {
+}
+
+.delete {
     position: absolute;
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
     color: #7b3e2b;
     cursor: pointer;
-  }
-  
-  .edit {
+}
+
+.edit {
     position: absolute;
     top: 50%;
     right: 80px;
     transform: translateY(-50%);
     color: #7b3e2b;
     cursor: pointer;
-  }
-  
-  .category {
+}
+
+.category {
     position: absolute;
     top: 50%;
     left: 40%;
@@ -147,5 +200,4 @@ form {
     color: #7b3e2b;
     font-style: italic;
     font-size: 14px;
-  }
-  /* todo: style the tasks, edit button, and 'X' */
+}

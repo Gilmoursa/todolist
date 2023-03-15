@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List App</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
-    <h1>Austin's To-Do List</h1>
-    <p class="description">Fill in the field below to add a new task. Click on a task below the form field to delete it.</p>
-    <form>
-      <input type="text" id="taskInput" placeholder="Add a task that needs doing">
-      <select id="categorySelect">
-        <option value="">Select category</option>
-        <option value="work">Work</option>
-        <option value="personal">Personal</option>
-        <option value="other">Other</option>
-      </select>
-      <button type="button" id="addButton">Add</button>
-    </form>
-    <ul id="taskList">
-    </ul>
-    <script src="script.js"></script>
+        <h1>To-Do List</h1>
+        <div id="categoryContainer">
+            <p class="categoryInstructions">Start by adding a new category or deleting an existing category</p>
+            <button id="categoryEditButton">Categories</button>
+            <div id="categoryEdit" style="display:none">
+                <h2>Categories:</h2>
+                <ul id="categoryList"></ul>
+                <label for="categoryInput">Add New Category:</label>
+                <input type="text" id="categoryInput" placeholder="Enter new category...">
+                <button id="categoryAddButton">Add Category</button>
+                <button id="categoryCancelButton">Close Category Settings</button>
+            </div>
+        </div>
+        <div id="taskContainer">
+            <p class="taskInstructions">Next, fill in a task and assign it one of your categories</p>
+            <label for="taskInput">Add Task:</label>
+            <input type="text" id="taskInput" placeholder="Enter task...">
+            <label for="categorySelect">Category:</label>
+            <select id="categorySelect">
+                <option value="">Select a category</option>
+            </select>
+            <button id="addButton">Add</button>
+
+            <h2>Tasks:</h2>
+            <ul id="taskList"></ul>
+        </div>
+
+        <script src="script.js"></script>
     </div>
-  </body>
+</body>
+
 </html>
