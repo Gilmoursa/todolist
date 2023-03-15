@@ -53,6 +53,12 @@ h1 {
 
 }
 
+.categoryInstructions span {
+    color: #C8C8C8;
+    font-weight: bold;
+    font-style: italic;
+}
+
 .taskInstructions {
     padding: 10px;
     color: #183619;
@@ -63,7 +69,7 @@ h1 {
 /* Form basics */
 #categoryCancelButton {
     background-color: #565656;
-    color: white;
+    color: #C8C8C8;
     padding: 10px 20px;
     margin: 8px 0;
     border: none;

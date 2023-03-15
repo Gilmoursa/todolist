@@ -9,8 +9,8 @@ const categoryEditButton = document.getElementById("categoryEditButton");
 const categoryCancelButton = document.getElementById("categoryCancelButton");
 const categoryAddButton = document.getElementById("categoryAddButton");
 
-// Initializing categories array
-let categories = [];
+// Initializing categories array, preloading with 2 categories: business and personal
+let categories = ['business', 'personal'];
 
 // Add event listener to categoryEditButton
 categoryEditButton.addEventListener("click", () => {
