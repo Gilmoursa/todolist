@@ -12,30 +12,29 @@
 <body>
     <div class="container">
         <h1>To-Do List</h1>
-        <div id="categoryContainer">
-            <p class="categoryInstructions">Start by adding a new category or deleting an existing category. <span>Business</span> and <span>Personal</span> been added as a start.</p>
-            <button id="categoryEditButton">Categories</button>
-            <div id="categoryEdit" style="display:none">
-                <h2>Categories:</h2>
-                <ul id="categoryList"></ul>
-                <label for="categoryInput">Add New Category:</label>
-                <input type="text" id="categoryInput" placeholder="Enter new category...">
-                <button id="categoryAddButton">Add Category</button>
-                <button id="categoryCancelButton">Close Category Settings</button>
+        <div id="category-container">
+            <p class="category-instructions">Start by adding a new category or deleting an existing category.
+                <span>Business</span> and <span>Personal</span> been added as a start.</p>
+            <button id="category-edit-button">Edit Categories</button>
+            <div id="category-edit" style="display:none">
+                <ul id="category-list"></ul>
+                <label for="category-input">Add New Category:</label>
+                <input type="text" id="category-input" placeholder="Enter new category...">
+                <button id="category-add-button">Add Category</button>
             </div>
         </div>
         <div id="taskContainer">
-            <p class="taskInstructions">Next, fill in a task and assign it one of your categories</p>
-            <label for="taskInput">Add Task:</label>
-            <input type="text" id="taskInput" placeholder="Enter task...">
-            <label for="categorySelect">Category:</label>
-            <select id="categorySelect">
+            <p class="task-instructions">Next, fill in a task and assign it one of your categories</p>
+            <label for="task-input">Add Task:</label>
+            <input type="text" id="task-input" placeholder="Enter task...">
+            <label for="category-select">Category:</label>
+            <select id="category-select">
                 <option value="">Select a category</option>
             </select>
-            <button id="addButton">Add</button>
+            <button id="add-button">Add</button>
 
             <h2>Tasks:</h2>
-            <ul id="taskList"></ul>
+            <ul id="task-list"></ul>
         </div>
 
         <script src="script.js"></script>

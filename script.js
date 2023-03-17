@@ -1,27 +1,28 @@
 // Creating my variables
-const taskInput = document.getElementById("taskInput");
-const categorySelect = document.getElementById("categorySelect");
-const addButton = document.getElementById("addButton");
-const taskList = document.getElementById("taskList");
-const categoryList = document.getElementById("categoryList");
-const categoryInput = document.getElementById("categoryInput");
-const categoryEditButton = document.getElementById("categoryEditButton");
-const categoryCancelButton = document.getElementById("categoryCancelButton");
-const categoryAddButton = document.getElementById("categoryAddButton");
+const taskInput = document.getElementById("task-input");
+const categorySelect = document.getElementById("category-select");
+const addButton = document.getElementById("add-button");
+const taskList = document.getElementById("task-list");
+const categoryList = document.getElementById("category-list");
+const categoryInput = document.getElementById("category-input");
+const categoryEditButton = document.getElementById("category-edit-button");
+const categoryCancelButton = document.getElementById("category-cancel-button");
+const categoryAddButton = document.getElementById("category-add-button");
 
 // Initializing categories array, preloading with 2 categories: business and personal
 let categories = ['business', 'personal'];
 
 // Add event listener to categoryEditButton
 categoryEditButton.addEventListener("click", () => {
+    const categoryEdit = document.getElementById("category-edit");
     // Show the category edit section
-    document.getElementById("categoryEdit").style.display = "block";
-});
-
-// Add event listener to categoryCancelButton
-categoryCancelButton.addEventListener("click", () => {
-    // Hide the category edit section
-    document.getElementById("categoryEdit").style.display = "none";
+    if (categoryEdit.style.display === "none") {
+        categoryEdit.style.display = "block";
+        categoryEditButton.innerHTML = "Hide Categories";
+    } else {
+        categoryEdit.style.display = "none";
+        categoryEditButton.innerHTML = "Edit Categories";
+    }
 });
 
 // Add event listener to categoryAddButton
